@@ -7,10 +7,10 @@ use std::ptr;
 use std::ptr::NonNull;
 
 #[derive(Debug)]
-
 enum DynamicErr {
     OutOfBound,
 }
+#[derive(Debug)]
 struct DynamicArray<T: fmt::Debug, U: Allocator = Global> {
     capacity: NonZeroUsize,
     len: usize,
